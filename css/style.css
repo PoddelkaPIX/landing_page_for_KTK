@@ -1,0 +1,245 @@
+/* Глобальные стили */
+body{
+    margin: 0;
+    padding-top: 80px;
+    font-family: cursive;
+    font-size: 14px !important;
+}
+main{
+    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+.title-1{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.detailed{
+    color: rgb(72, 72, 72);
+    text-decoration: none;
+    border-bottom: 1px dotted rgb(72, 72, 72);
+    margin-top: auto;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+hr{
+    border: none;
+    background-color: rgb(198, 198, 198);
+    height: 1px;
+}
+
+/* Шапка */
+#header{
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 4px 10px rgba(214, 214, 214, 50%);
+}
+#logo{
+    height: 20px;
+    margin-right: 30px;
+}
+.nav-link{
+    margin-right: 10px;
+    font-weight: bold !important;
+    border-bottom: 1px solid white;
+}
+.nav-link:hover{
+    border-bottom: 1px solid black;
+}
+/* Первый блок с информацией */
+#information{
+    display: flex;
+    gap: 40px;
+}
+#information > img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+#description{
+    display: flex;
+    flex-direction: column;
+}
+#description > p{
+    max-width: 50%;
+    margin-bottom: 50px;
+}
+#information-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.information-card{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgb(65, 65, 65);
+
+}
+
+/* Список курсов */
+.title-course{
+    text-align:center ; 
+    width: 100%;
+    margin-bottom: 10px;
+}
+#courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+.course-card{
+    width:550px;
+    border-radius: 15px;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: 2px 4px 4px rgb(237, 237, 237);
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    min-width: 400px;
+    cursor: pointer;
+}
+.course-card:hover{
+    transform: scale(1.02);
+}
+.course-information{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+}
+.course-avatar{
+    object-fit: cover;
+    height: 100%;
+    width: 150px;
+    border: 1px solid rgb(247, 247, 247);
+}
+/* Форма записи на курс */
+#sign-up-for-course{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+/* Слайдер */
+#carouselExampleDark{
+    width: 50%;
+}
+.carousel-inner img{
+    height: 500px;
+    object-fit: cover;
+    padding-bottom: 170px;
+}
+
+/* Где нас найти? */
+#location{
+    padding-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+#location-information{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* Подвал */
+footer {
+    -webkit-box-shadow: 8px 8px 18px #c9c9c9;
+            box-shadow: 8px 8px 18px #c9c9c9;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border: 2px solid #e4e4e4;
+    margin-top: auto;
+    text-align: center;
+    color: #818181;
+}
+footer #contacts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+footer #contacts .contact{
+    width: 30%;
+    text-align: left;
+}
+footer #contacts div a {
+    color: #0b869d; 
+}
+footer #contacts div span {
+    font-weight: bold;
+}
+ 
+@media screen and (max-width: 1500px) {
+    #carouselExampleDark{
+        width: 100%;
+    }
+    #sign-up-for-course{
+        flex-direction: column;
+    }
+    .course-card{
+        flex-direction: column;
+        min-width: 90%;
+    }
+    .course-avatar{
+        height: 170px;
+        width: auto;
+    }
+    #information{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #description > p{
+        max-width: 100%;
+    }
+    /* Где нас найти? */
+    #location{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer #contacts .contact{
+        width: 90%;
+    }
+    #header{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    main{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    /* Где нас найти? */
+    #location-information{
+        font-size: 16px;
+    }
+
+}
+/* https://skillbox.ru/course/programming-introduction-free/?utm_source=yandex&utm_medium=cpc&utm_campaign=579_programming-introduction_yandex_cpc_master-campaign_course_all_all_gizatullin_76443400&utm_content=adg_4972788365%7Cad_12437755189%7Cph_39971030882%7Ckey_%7Cdev_desktop%7Cpst_premium_1%7Crgnid_53_Курган%7Cplacement_none%7Ccreative_%7Bcreative_name%7D&utm_term=&etext=2202.3ovgdfTEnuEPYcftxfXI14x5olzaTtntLbL0OiTjtCNtfWHO2vbEMH2Spi45pObHd98X5721_0kXmIcjUrVELWNnemZwZWNjd2ZyYnhraG8.9d77b21216315092a0200abbb8155401cad4b522&yclid=7369331588911918683 */
